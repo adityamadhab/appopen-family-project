@@ -10,11 +10,12 @@ import HelpCenterPage from './pages/HelpCenterPage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import NewHeader from './components/NewHeader';
 
 function App() {
   return (
     <Router>
-      <Header />
+      <NewHeader />
       <main className="min-h-screen">
         <Routes>
           <Route path="/" element={<HomePage />} />

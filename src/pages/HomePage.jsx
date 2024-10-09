@@ -3,98 +3,78 @@ import { TreePine, Upload, AlertCircle } from 'lucide-react';
 
 function HomePage() {
     return (
-        <div className="min-h-screen bg-gray-100">
-            <div className="container mx-auto px-4 py-16">
+        <div className="min-h-screen bg-white mt-4 max-w-7xl mx-auto">
+
+            {/* Main Content */}
+            <div className="container mx-auto px-4 py-8">
                 {/* Hero Section */}
-                <section className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-4">
+                <section className="text-center mb-8 border-b-2 pb-8 border-gray-300">
+                    <h1 className="text-2xl font-bold text-blue-900 mb-4">
                         Family History Documentation Portal
                     </h1>
-                    <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
-                        The official platform to document, explore, and preserve family records for future generations.
+                    <p className="text-gray-700 text-md mb-6">
+                        Official platform to document, explore, and preserve family records.
                     </p>
-                    <div className="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <div className="w-16 h-1 bg-blue-700 mx-auto mb-4"></div>
                 </section>
 
-                {/* CTA Section */}
-                <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-16">
-                    <Link
-                        to="/register"
-                        className="flex items-center justify-center px-6 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-all"
-                    >
+                {/* Action Buttons */}
+                <div className="text-center mb-8">
+                    <Link to="/register" className="bg-blue-700 text-white px-6 py-2 inline-block font-semibold border border-gray-300 hover:bg-blue-800">
                         Register
                     </Link>
-                    <Link
-                        to="/login"
-                        className="flex items-center justify-center px-6 py-3 bg-white text-gray-700 border-2 border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition-all"
-                    >
+                    <Link to="/login" className="ml-4 bg-white text-blue-900 px-6 py-2 inline-block font-semibold border border-gray-300 hover:bg-gray-200">
                         Sign In
                     </Link>
                 </div>
 
-                {/* Feature Cards */}
-                <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                            <TreePine className="w-6 h-6 text-blue-700" />
+                {/* Features Section */}
+                <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div className="border border-gray-300 p-4 bg-white">
+                        <div className="w-10 h-10 bg-blue-100 text-blue-900 mb-4 p-2 mx-auto flex items-center justify-center">
+                            <TreePine className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                            Create a Family Tree
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Easily build a family tree by adding family members, records, and historical events.
+                        <h3 className="text-lg font-semibold text-blue-900 mb-2">Create a Family Tree</h3>
+                        <p className="text-gray-700 text-sm">
+                            Add family members, records, and historical events to build your family tree.
                         </p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                            <Upload className="w-6 h-6 text-green-700" />
+                    <div className="border border-gray-300 p-4 bg-white">
+                        <div className="w-10 h-10 bg-green-100 text-green-900 mb-4 p-2 mx-auto flex items-center justify-center">
+                            <Upload className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                            Document Storage
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Securely upload and manage important family documents, photos, and certificates.
+                        <h3 className="text-lg font-semibold text-blue-900 mb-2">Document Storage</h3>
+                        <p className="text-gray-700 text-sm">
+                            Securely upload and store important family documents.
                         </p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                        <div className="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                            <AlertCircle className="w-6 h-6 text-red-600" />
+                    <div className="border border-gray-300 p-4 bg-white">
+                        <div className="w-10 h-10 bg-red-100 text-red-900 mb-4 p-2 mx-auto flex items-center justify-center">
+                            <AlertCircle className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                            Verification Services
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Verify and authenticate family records with our government-backed verification system.
+                        <h3 className="text-lg font-semibold text-blue-900 mb-2">Verification Services</h3>
+                        <p className="text-gray-700 text-sm">
+                            Verify and authenticate family records with our verification system.
                         </p>
                     </div>
                 </section>
 
                 {/* Statistics Section */}
-                <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div className="text-3xl font-bold text-blue-700 mb-2">10,000+</div>
-                        <div className="text-gray-600">Family Trees Created</div>
+                <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div className="text-center bg-gray-100 p-4 border border-gray-300">
+                        <div className="text-blue-900 text-2xl font-bold">10,000+</div>
+                        <p className="text-gray-700 text-sm">Family Trees Created</p>
                     </div>
-                    <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div className="text-3xl font-bold text-green-700 mb-2">50,000+</div>
-                        <div className="text-gray-600">Documents Stored</div>
+                    <div className="text-center bg-gray-100 p-4 border border-gray-300">
+                        <div className="text-green-900 text-2xl font-bold">50,000+</div>
+                        <p className="text-gray-700 text-sm">Documents Stored</p>
                     </div>
-                    <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
-                        <div className="text-3xl font-bold text-purple-700 mb-2">25,000+</div>
-                        <div className="text-gray-600">Verified Records</div>
+                    <div className="text-center bg-gray-100 p-4 border border-gray-300">
+                        <div className="text-red-900 text-2xl font-bold">25,000+</div>
+                        <p className="text-gray-700 text-sm">Verified Records</p>
                     </div>
-                </section>
-
-                {/* Trust Banner */}
-                <section className="text-center bg-white rounded-lg p-8 border border-gray-200">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-4">
-                        Official Government Partner
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        Join thousands of families using our government-approved platform to preserve their family history for future generations.
-                    </p>
                 </section>
             </div>
         </div>
