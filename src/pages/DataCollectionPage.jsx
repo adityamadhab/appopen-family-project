@@ -126,7 +126,7 @@ function DataCollectionPage() {
             <label className="block text-sm font-bold text-gray-700 mb-2">Upload {doc.charAt(0).toUpperCase() + doc.slice(1)} Document</label>
             <div className="flex items-center justify-center w-full">
                 <label htmlFor={`${prefix}-${doc}-file-upload`} className="flex flex-col items-center justify-center w-full h-24 border border-gray-400 bg-white cursor-pointer">
-                    <div className="text-center">
+                    <div className="text-center flex flex-col justify-center items-center	">
                         <Upload className="w-6 h-6 mb-2 text-gray-600" />
                         <p className="text-xs text-gray-600"><span className="font-semibold">Click to upload</span> or drag and drop</p>
                         <p className="text-xs text-gray-500">PDF, JPG, PNG (MAX. 2MB)</p>
@@ -139,7 +139,7 @@ function DataCollectionPage() {
 
     return (
         <div className="min-h-screen bg-gray-100 px-4 py-8">
-            <div className="container mx-auto max-w-4xl">
+            <div className="container mx-auto max-w-auto">
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-white border border-gray-400 p-6 mb-8">
                     {/* Personal Information */}
                     <section className="space-y-6 mb-8">

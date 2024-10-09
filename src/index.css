@@ -9,7 +9,7 @@
 }
 
 .input {
-  @apply border border-gray-300 rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500;
+  @apply border border-[#8A8684] rounded w-full py-2 px-3 focus:outline-none focus:border-[#8A8684];
 }
 
 .feature-card {
@@ -18,4 +18,8 @@
 
 .dashboard-card {
   @apply p-6 bg-blue-100 text-blue-800 font-semibold rounded hover:bg-blue-200 transition;
+}
+
+html, body {
+     font-family: "Montserrat", sans-serif !important;
 }

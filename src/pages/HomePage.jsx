@@ -4,23 +4,25 @@ import { TreePine, Upload, AlertCircle } from 'lucide-react';
 function HomePage() {
     return (
         <div className="min-h-screen bg-white mt-4 max-w-7xl mx-auto">
-
             {/* Main Content */}
             <div className="container mx-auto px-4 py-8">
                 {/* Hero Section */}
-                <section className="text-center mb-8 border-b-2 pb-8 border-gray-300">
-                    <h1 className="text-2xl font-bold text-blue-900 mb-4">
-                        Family History Documentation Portal
-                    </h1>
-                    <p className="text-gray-700 text-md mb-6">
-                        Official platform to document, explore, and preserve family records.
-                    </p>
-                    <div className="w-16 h-1 bg-blue-700 mx-auto mb-4"></div>
+                <section className="text-center mb-8 border-b-2 pb-8 border-gray-300 flex   " >
+                    <img src='/Narendra-Modi-the-Leaders-Page-removebg-preview.png' alt='Indian Flag' width={"300px"} height={"120px"} className='mr-5'></img>
+                    <div className='flex flex-col grow justify-center'>
+                        <h1 className="text-2xl font-bold text-[#D96A60] mb-4">
+                            Family History Documentation Portal
+                        </h1>
+                        <p className="text-gray-700 text-md mb-6">
+                            Official platform to document, explore, and preserve family records.
+                        </p>
+                        <div className="w-16 h-1 bg-[#D96A60] mx-auto mb-4"></div>
+                    </div>
                 </section>
 
                 {/* Action Buttons */}
                 <div className="text-center mb-8">
-                    <Link to="/register" className="bg-blue-700 text-white px-6 py-2 inline-block font-semibold border border-gray-300 hover:bg-blue-800">
+                    <Link to="/register" className="bg-[#D96A60] text-white px-6 py-2 inline-block font-semibold border border-gray-300 hover:bg-[#D75449]">
                         Register
                     </Link>
                     <Link to="/login" className="ml-4 bg-white text-blue-900 px-6 py-2 inline-block font-semibold border border-gray-300 hover:bg-gray-200">
