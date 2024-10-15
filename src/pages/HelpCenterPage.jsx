@@ -29,7 +29,7 @@ const FAQItem = ({ question, answer }) => {
                         }}
                         transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
-                        <div className="px-6 py-4 bg-gray-50">
+                        <div className="px-6 py-4 bg-orange-50">
                             <p className="text-gray-700">{answer}</p>
                         </div>
                     </motion.div>
@@ -57,13 +57,13 @@ const HelpCenterPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-                <h1 className="text-4xl font-bold text-center text-indigo-800 mb-12">Help Center</h1>
+                <h1 className="text-4xl font-bold text-center text-orange-800 mb-12">Help Center</h1>
 
                 {/* FAQs Section */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 text-indigo-700">Frequently Asked Questions</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-orange-700">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
                             <FAQItem key={index} question={faq.question} answer={faq.answer} />
@@ -73,14 +73,14 @@ const HelpCenterPage = () => {
 
                 {/* Contact Form */}
                 <section className="bg-white p-8 rounded-lg shadow-lg">
-                    <h2 className="text-2xl font-bold mb-6 text-indigo-700">Contact Us</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-orange-700">Contact Us</h2>
                     <form className="space-y-4">
                         <div className="relative">
                             <User className="absolute top-3 left-3 text-gray-400" size={20} />
                             <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                             />
                         </div>
                         <div className="relative">
@@ -88,17 +88,17 @@ const HelpCenterPage = () => {
                             <input
                                 type="email"
                                 placeholder="Your Email"
-                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                             />
                         </div>
                         <textarea
                             placeholder="Your Message"
                             rows="5"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                         ></textarea>
                         <motion.button
                             type="submit"
-                            className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >

@@ -20,6 +20,67 @@
   @apply p-6 bg-blue-100 text-blue-800 font-semibold rounded hover:bg-blue-200 transition;
 }
 
-html, body {
-     font-family: "Montserrat", sans-serif !important;
+html,
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.tree ul {
+  position: relative;
+  padding-top: 20px;
+  transition: all 0.5s;
+}
+
+.tree li {
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  text-align: center;
+}
+
+.tree li::before,
+.tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 20px;
+  border-top: 2px solid #ccc;
+}
+
+.tree li::after {
+  right: 0;
+}
+
+.tree li::before {
+  left: 0;
+  right: auto;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree .person:hover {
+  background-color: #d35400;
 }
