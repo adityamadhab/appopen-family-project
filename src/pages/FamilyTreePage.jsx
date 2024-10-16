@@ -4,6 +4,7 @@ import Tree from 'react-d3-tree';
 function FamilyTreePage() {
     const [hoveredPerson, setHoveredPerson] = useState(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+    
 
     // Define the hierarchical structure for the family tree
     const familyTreeData = [
@@ -58,14 +59,16 @@ function FamilyTreePage() {
 
     return (
         <div className="h-screen bg-gray-100 flex flex-col justify-center items-center">
-            <h1 className='text-2xl font-bold'>Your Family Tree</h1>
-            <div className="tree-container" style={{ width: '100%', height: '600px' }}>
+            <h1 className='text-2xl font-bold mb-4'>Your Family Tree</h1>
+            <div className="tree-container w-full h-[calc(100vh-100px)] relative">
                 <Tree
                     data={familyTreeData}
-                    translate={{ x: 500, y: 50 }} // Increase horizontal translation for better centering
+                    translate={{ x: window.innerWidth / 2, y: 50 }}
                     orientation="vertical"
                     pathFunc="diagonal"
-                    separation={{ siblings: 1.5, nonSiblings: 2 }} // Increase separation for better spacing
+                    separation={{ siblings: 1.5, nonSiblings: 2 }}
+                    centeringTransitionDuration={800}
+                    zoom={0.8}
                     renderCustomNodeElement={({ nodeDatum, toggleNode }, evt) => (
                         <g>
                             <circle
@@ -77,9 +80,9 @@ function FamilyTreePage() {
                             <text
                                 fill="black"
                                 strokeWidth="1"
-                                x="30" // Increased horizontal spacing from the node
+                                x="30"
                                 y="5"
-                                style={{ fontSize: '12px' }} // Decrease font size for better fitting
+                                style={{ fontSize: '12px' }}
                             >
                                 {nodeDatum.name}
                             </text>

@@ -18,7 +18,8 @@ function DataCollectionPage() {
             title: 'Welcome to the Application Form',
             text: 'Please fill out all required fields and verify your documents. Make sure to upload supporting documents where necessary.',
             icon: 'info',
-            confirmButtonText: 'Got it!'
+            confirmButtonText: 'Got it!',
+            showCloseButton: true
         });
     }, []);
 
@@ -105,13 +106,14 @@ function DataCollectionPage() {
 
         Swal.fire({
             title: 'Form Preview',
-            html: formPreviewHtml,  // Displaying form data with improved design
+            html: formPreviewHtml,
             confirmButtonText: 'Submit',
             showCancelButton: true,
-            width: '600px',  // Adjust width to fit content nicely
-            focusConfirm: false,  // Prevent auto focus on the confirm button
+            showCloseButton: true,
+            width: '600px',
+            focusConfirm: false,
             customClass: {
-                popup: 'animated fadeInDown faster'  // Add animation class for smooth appearance
+                popup: 'animated fadeInDown faster'
             }
         }).then((result) => {
             if (result.isConfirmed) {
@@ -152,7 +154,8 @@ function DataCollectionPage() {
             icon: 'info',
             timer: 3000,
             timerProgressBar: true,
-            showConfirmButton: false
+            showConfirmButton: false,
+            showCloseButton: true
         });
     };
 
@@ -162,7 +165,8 @@ function DataCollectionPage() {
             title: 'Verified!',
             icon: 'success',
             timer: 1500,
-            showConfirmButton: false
+            showConfirmButton: false,
+            showCloseButton: true
         });
     };
 
@@ -176,13 +180,15 @@ function DataCollectionPage() {
                 Swal.fire({
                     title: 'Invalid File Type',
                     text: `Please upload a valid PDF, JPG, or PNG document.`,
-                    icon: 'error'
+                    icon: 'error',
+                    showCloseButton: true
                 });
             } else if (file.size > maxSize) {
                 Swal.fire({
                     title: 'File Too Large',
                     text: 'Please upload a document smaller than 2MB.',
-                    icon: 'error'
+                    icon: 'error',
+                    showCloseButton: true
                 });
             } else {
                 Swal.fire({
@@ -190,7 +196,8 @@ function DataCollectionPage() {
                     text: `You have uploaded a ${doc} document.`,
                     icon: 'success',
                     timer: 2000,
-                    showConfirmButton: false
+                    showConfirmButton: false,
+                    showCloseButton: true
                 });
             }
         }
@@ -273,7 +280,7 @@ function DataCollectionPage() {
     return (
         <div className="min-h-screen bg-gray-100 px-4 py-8">
             <div className="container mx-auto max-w-auto">
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-white border border-gray-400 p-6 mb-8">
+                <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-xl border border-gray-300 p-6 mb-8">
                     {/* Personal Information */}
                     <section className="space-y-6 mb-8">
                         <div className="border-b pb-2 mb-4">
