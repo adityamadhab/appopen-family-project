@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import NewHeader from './components/NewHeader';
 
+
 function App() {
   return (
     <Router>
